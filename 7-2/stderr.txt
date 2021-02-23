@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\gerha\Google Drive\Studies\Unisa\INF2611 - Visual Programming 2\Programs\7-2\callwelcome.pyw", line 2, in <module>
+    from welcomemsg import * 
+  File "C:\Users\gerha\Google Drive\Studies\Unisa\INF2611 - Visual Programming 2\Programs\7-2\welcomemsg.py", line 9, in <module>
+    from PyQt4 import QtCore, QtGui
+ImportError: DLL load failed: %1 is not a valid Win32 application.
