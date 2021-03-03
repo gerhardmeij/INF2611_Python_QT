@@ -7,6 +7,11 @@ class MyForm(QtGui.QDialog):
         self.ui = Ui_Dialog() 
         self.ui.setupUi(self) 
         QtCore.QObject.connect(self.ui.CalculateButton, QtCore.SIGNAL('clicked()'),self.calculate)
+        QtCore.QObject.connect(self.ui.checkPizza20, QtCore.SIGNAL('clicked()'),self.calculate) 
+        QtCore.QObject.connect(self.ui.checkHotDog5, QtCore.SIGNAL('clicked()' ),self.calculate) 
+        QtCore.QObject.connect(self.ui.checkFries10, QtCore.SIGNAL('clicked()' ),self.calculate) 
+        QtCore.QObject.connect(self.ui.checkBurger15, QtCore.SIGNAL('clicked()'),self.calculate)
+        
     def calculate(self): 
         amt=0 
         if self.ui.checkPizza20.isChecked()==True: 
