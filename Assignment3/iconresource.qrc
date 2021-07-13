@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/newclient.ico</file>
+    <file>icons/newevent.ico</file>
+    <file>icons/newvenue.ico</file>
+  </qresource>
+</RCC>
