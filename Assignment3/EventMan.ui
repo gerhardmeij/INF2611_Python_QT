@@ -54,7 +54,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="eventName"/>
        </item>
        <item row="7" column="0">
         <widget class="QLabel" name="label_2">
@@ -71,10 +71,10 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="lineEdit_2"/>
+        <widget class="QLineEdit" name="eventLimit"/>
        </item>
        <item row="7" column="1">
-        <widget class="QCalendarWidget" name="calendarWidget"/>
+        <widget class="QCalendarWidget" name="eventDate"/>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_4">
@@ -84,7 +84,7 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QTimeEdit" name="timeEdit"/>
+        <widget class="QTimeEdit" name="eventStartTime"/>
        </item>
        <item row="6" column="0">
         <widget class="QLabel" name="label_5">
@@ -94,7 +94,7 @@
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QTimeEdit" name="timeEdit_2"/>
+        <widget class="QTimeEdit" name="eventEndTime"/>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_6">
@@ -103,18 +103,12 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QComboBox" name="comboBox"/>
-       </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_7">
          <property name="text">
           <string>Venue</string>
          </property>
         </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QComboBox" name="comboBox_2"/>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label_8">
@@ -124,26 +118,113 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="lineEdit_3"/>
+        <widget class="QLineEdit" name="eventFee"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="eventClient"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="eventVenue"/>
        </item>
       </layout>
+     </widget>
+     <widget class="QPushButton" name="eventSubmitButton">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>370</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="AddClient">
      <property name="windowTitle">
       <string>Add Client</string>
      </property>
-     <widget class="QLabel" name="label_9">
+     <widget class="QGroupBox" name="groupBox_4">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>80</y>
-        <width>46</width>
-        <height>13</height>
+        <x>10</x>
+        <y>20</y>
+        <width>291</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Client Detail</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>261</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_5">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_28">
+          <property name="text">
+           <string>First Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_29">
+          <property name="text">
+           <string>Last name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="clientLastName"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="clientPhone"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>Phone</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="clientFirstName"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_25">
+          <property name="text">
+           <string>Email</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="clientEmail"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="clientSubmitButton">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>140</y>
+        <width>75</width>
+        <height>23</height>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Submit</string>
       </property>
      </widget>
     </widget>
@@ -151,17 +232,188 @@
      <property name="windowTitle">
       <string>Add Venue</string>
      </property>
-     <widget class="QLabel" name="label_12">
+     <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>170</y>
-        <width>46</width>
-        <height>13</height>
+        <x>10</x>
+        <y>230</y>
+        <width>291</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Address</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>261</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>Address</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>City / Town</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>Province</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_24">
+          <property name="text">
+           <string>Postal Code</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="venueAddress"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="venueCity"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="venueProvince"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="venuePostalCode"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>291</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Venue Detail</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>261</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Venue Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="venueName"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Capacity</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="venueCapacity"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>291</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Contact Detail</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>261</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_4">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_26">
+          <property name="text">
+           <string>Contact name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_27">
+          <property name="text">
+           <string>Contact Number</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="venueContactNumber"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="venueContactEmail"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Email</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="venueContactName"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="venueSubmitButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>390</y>
+        <width>75</width>
+        <height>23</height>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Submit</string>
       </property>
      </widget>
     </widget>
@@ -169,54 +421,234 @@
      <property name="windowTitle">
       <string>All Events</string>
      </property>
-     <widget class="QLabel" name="label_13">
+     <widget class="QTableWidget" name="eventTableWidget">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>70</y>
-        <width>46</width>
-        <height>13</height>
+        <x>0</x>
+        <y>0</y>
+        <width>851</width>
+        <height>771</height>
        </rect>
       </property>
-      <property name="text">
-       <string>TextLabel</string>
+      <property name="rowCount">
+       <number>50</number>
       </property>
+      <property name="columnCount">
+       <number>8</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
      </widget>
     </widget>
     <widget class="QWidget" name="ViewAllClients">
      <property name="windowTitle">
       <string>All Clients</string>
      </property>
-     <widget class="QLabel" name="label_11">
+     <widget class="QTableWidget" name="clientTableWidget">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>30</y>
-        <width>46</width>
-        <height>13</height>
+        <x>10</x>
+        <y>0</y>
+        <width>441</width>
+        <height>771</height>
        </rect>
       </property>
-      <property name="text">
-       <string>TextLabel</string>
+      <property name="rowCount">
+       <number>50</number>
       </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
      </widget>
     </widget>
     <widget class="QWidget" name="ViewAllVenues">
      <property name="windowTitle">
       <string>All Venues</string>
      </property>
-     <widget class="QLabel" name="label_10">
+     <widget class="QTableWidget" name="venueTableWidget">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>20</y>
-        <width>46</width>
-        <height>13</height>
+        <x>0</x>
+        <y>0</y>
+        <width>951</width>
+        <height>771</height>
        </rect>
       </property>
-      <property name="text">
-       <string>TextLabel</string>
+      <property name="rowCount">
+       <number>50</number>
       </property>
+      <property name="columnCount">
+       <number>9</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
      </widget>
     </widget>
    </widget>
